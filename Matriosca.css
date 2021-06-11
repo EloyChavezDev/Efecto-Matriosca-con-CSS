@@ -1,0 +1,60 @@
+input[type='checkbox'],
+input[type='reset'] {
+  display: none;
+}
+label {
+  position: absolute;
+  opacity: 0;
+}
+.doll {
+  width: 100px;
+  height: 100px;
+}
+.doll0 {
+  width: 100px;
+  height: 200px;
+  z-index: 4;
+}
+.doll1 {
+  width: 200px;
+  height: 260px;
+  z-index: 1;
+}
+.doll__body {
+  width: 100%;
+  height: 30%;
+}
+.doll--top img {
+  width: 100%;
+	height: 100%;
+}
+.doll--bottom img {
+  width: 100%;
+	height: 100%;
+}
+input:checked + label .doll--top {
+  animation: up 0.3s forwards;
+}
+@keyframes up {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+input:checked + label .doll--bottom {
+  animation: down 0.3s forwards;
+}
+@keyframes down {
+  from { transform: translateY(0); }
+  to { transform: translateY(50%); }
+}
+form input:nth-child(1):checked + label + input + label {
+  opacity: 1;
+  animation: move1 0.3s forwards;
+}
+@keyframes move1 {
+  from { transform: translateX(0); }
+  to { transform: translateX(100px); }
+}
+form input:nth-child(3):checked + label + input + label {
+  opacity: 1;
+  animation: move2 0.3s forwards;
+}
