@@ -58,3 +58,10 @@ form input:nth-child(3):checked + label + input + label {
   opacity: 1;
   animation: move2 0.3s forwards;
 }
+
+.elcofre {
+  color: Purple;
+	position: absolute;
+  right: 90px;
+  top: 50px;
+}
